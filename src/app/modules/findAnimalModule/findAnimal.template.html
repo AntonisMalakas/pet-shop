@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Form</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+    <!-- <link rel="stylesheet" href="./addAnimal.component.css"> -->
+
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div [formGroup]="findAnimalFormGroup">
+            <div class='ui-g'>
+                <div class="row">
+                    <h3>{{petType}} Name: {{petName}} -- Breed: {{petBreed}} -- Gender: {{petGender}}</h3>
+                    <h5>Owner: {{ownerName}} -- Email: {{ownerEmail}} -- Phone: {{ownerPhone}}</h5>
+
+                </div>
+
+                <div class="ui-g-12">
+                    <div class="ui-g-12">
+                        <h4>Next Vaccine:</h4>
+                    </div>
+                    <div class="ui-g-6">
+
+                        <div class="input-group input-group-icon">
+                            <input id="date" type="date" formControlName='petNextVaccine'>
+                            <div class="input-icon">
+                                <i class="fa fa-eyedropper"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class='ui-g-12'>
+                    <div class='ui-g-4'></div>
+                    <div class='ui-g-4'>
+                        <button class="button-color" pButton type='button' (click)="save()" label="Save"></button>
+
+                    </div>
+                    <div class='ui-g-4'></div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

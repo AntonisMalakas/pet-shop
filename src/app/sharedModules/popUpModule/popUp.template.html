@@ -1,0 +1,15 @@
+<div class="ui-g">
+    <div class="blade-close ui-g-6">
+        <!-- <button pButton type="button" icon="fa-times" (click)="showCloseDialog=true"></button> -->
+        <p-dialog [(visible)]="showErrorDialog" width="300" header="{{animalCode}}" appendTo="body" responsive="true" closeOnEscape="true" modal="true" (onHide)="onHide($event)"	>
+
+            <p>{{animalMessage}}</p>
+            <footer>
+                <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+                    <button type="button" pButton icon="fa-close" (click)="showPopUp = false" label="Ok" (click)="changeStatus(showErrorDialog)"></button>
+                    <!-- <button type="button" pButton icon="fa-check" (click)="close()" label="Yes"></button> -->
+                </div>
+            </footer>
+        </p-dialog>
+    </div>
+</div>
